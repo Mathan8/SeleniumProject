@@ -93,11 +93,17 @@ import com.training.utility.DriverNames;
 			createpropertydetailsPOM.publishproperty();
 			//check for post published message
 			createpropertydetailsPOM.verifypropertypublished();
+			//hover over the user icon
 			createpropertydetailsPOM.adminHover();
+			//log out of the application
 			createpropertydetailsPOM.clickLogOut();
+			//Click on real estate link
 			createpropertydetailsPOM.clickrealestate();
+			//search for the added property
 			createpropertydetailsPOM.searchproperty("Puravankara");
+			//verify the added property link
 			createpropertydetailsPOM.verifyaddedfeature2();
+			//move to newly opened tab and verify the added property name
 			createpropertydetailsPOM.verifyaddedfeaturetitle();
 		}
 	}

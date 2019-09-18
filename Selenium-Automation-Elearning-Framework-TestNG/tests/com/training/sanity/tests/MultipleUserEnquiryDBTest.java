@@ -69,7 +69,7 @@ public class MultipleUserEnquiryDBTest {
 		//click on Send
 		enquiryPOM.submit();
 		//validate the error message since there is no server
-		enquiryPOM.validateerrormsg();
+		enquiryPOM.verifyinvalidinput();
 		screenShot.captureScreenShot("First");	
 	}
 

@@ -57,7 +57,9 @@ public class LoginTest {
 		loginPOM.clickLoginBtn();
 		//check if the dashboard is displayed after successful login
 		loginPOM.dashBoard();
+		//mouse over the user icon
 		loginPOM.adminHover();
+		//logout of the application
 		loginPOM.clickLogOut();
 		screenShot.captureScreenShot("First");
 	}

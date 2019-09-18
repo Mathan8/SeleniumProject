@@ -48,10 +48,15 @@ public class PwdRecoveryTest {
 		
 		@Test
 		public void validLoginTest() throws InterruptedException {
+			//click on the link for login form to appear
 			pwdRecoveryPOM.clicklogIn();
+			//click on lost password link
 			pwdRecoveryPOM.lostyourPWD();
+			//provide recovery email
 			pwdRecoveryPOM.recoveryMail("manzoor@gmail.com");
+			//click on submit
 			pwdRecoveryPOM.clicksubmit();
+			//verify the error message as the website is not linked to mail server
 			pwdRecoveryPOM.verifyerrorpage();
 			screenShot.captureScreenShot("First");
 		}

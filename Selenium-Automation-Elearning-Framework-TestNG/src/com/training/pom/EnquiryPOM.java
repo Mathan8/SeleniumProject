@@ -50,6 +50,9 @@ public class EnquiryPOM {
 	@FindBy(xpath="//*[@class='wpcf7-form failed']/div[4]")
 	private WebElement errorMessage;
 	
+	@FindBy(xpath="//*[@class='wpcf7-response-output wpcf7-display-none wpcf7-validation-errors']")
+	private WebElement fielderrorMessage;	
+	
 	public void NewLaunch() {
 		this.newLaunch.click();
 	}
@@ -115,10 +118,17 @@ public class EnquiryPOM {
 	}
 	
 	public void validateerrormsg() {
-		//waitForElement(By.xpath("//*[@class='wpcf7-form failed']/div[4]"), 5);
 		String actual = errorMessage.getText();
 		System.out.println(actual);
 		String expected = "There was an error trying to send your message. Please try again later.";
 		Assert.assertEquals(actual, expected);
+	}
+	
+	public void verifyinvalidinput() throws InterruptedException {
+		String actual = fielderrorMessage.getText();
+		System.out.println(actual);
+		String expected = "One or more fields have an error. Please check and try again.";
+		Assert.assertEquals(actual, expected);
+		Thread.sleep(3000);
 	}
 }

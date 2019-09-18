@@ -53,17 +53,21 @@ public class EnquiryTest {
 		enquiryPOM.sendKeyword("Bangalore, Karnataka, India");
 		//enquiryPOM.selectLocation();
 		enquiryPOM.search();
+		//Click on Drop us a line Button
 		enquiryPOM.enquiry();
+		//provide name details
 		enquiryPOM.entername("manzoor");
+		//provide mail id
 		enquiryPOM.enteremail("manzoor@gmail.com");
+		//provide subject
 		enquiryPOM.entersubject("apartments");
+		//provide the intended message
 		enquiryPOM.yourmessage("looking for apartments");
+		//click on submit
 		enquiryPOM.submit();
+		//verify for the error message as the website is not connected to mail server
 		enquiryPOM.validateerrormsg();
 		screenShot.captureScreenShot("First");
-		
-		
-	
 	}
 
 }
