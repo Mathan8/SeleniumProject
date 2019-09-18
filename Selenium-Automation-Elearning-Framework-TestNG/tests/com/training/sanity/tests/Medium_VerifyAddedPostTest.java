@@ -15,7 +15,7 @@ import com.training.pom.VerifyAddedPostPOM;
 import com.training.utility.DriverFactory;
 import com.training.utility.DriverNames;
 
-public class VerifyAddedPostTest {
+public class Medium_VerifyAddedPostTest {
 	private WebDriver driver;
 	private String baseUrl;
 	private VerifyAddedPostPOM verifyaddedpostPOM;

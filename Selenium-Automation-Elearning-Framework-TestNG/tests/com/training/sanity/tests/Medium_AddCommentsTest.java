@@ -16,7 +16,7 @@ import com.training.pom.AddCommentsPOM;
 import com.training.utility.DriverFactory;
 import com.training.utility.DriverNames;
 
-public class AddCommentsTest {
+public class Medium_AddCommentsTest {
 	private WebDriver driver;
 	private String baseUrl;
 	private AddCommentsPOM addcommentsPOM;

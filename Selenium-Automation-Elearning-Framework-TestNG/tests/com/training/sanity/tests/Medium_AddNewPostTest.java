@@ -18,7 +18,7 @@ import com.training.utility.DriverNames;
 
 import net.bytebuddy.asm.Advice.Enter;
 
-public class AddNewPostTest {
+public class Medium_AddNewPostTest {
 	private WebDriver driver;
 	private String baseUrl;
 	private AddNewPostPOM addnewpostPOM;
