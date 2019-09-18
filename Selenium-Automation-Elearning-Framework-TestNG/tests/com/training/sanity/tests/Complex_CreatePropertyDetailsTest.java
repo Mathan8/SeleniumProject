@@ -16,7 +16,7 @@ import com.training.utility.DriverFactory;
 import com.training.utility.DriverNames;
 
 
-	public class CreatePropertyDetailsTest {
+	public class Complex_CreatePropertyDetailsTest {
 		private WebDriver driver;
 		private String baseUrl;
 		private CreatePropertyDetailsPOM createpropertydetailsPOM;

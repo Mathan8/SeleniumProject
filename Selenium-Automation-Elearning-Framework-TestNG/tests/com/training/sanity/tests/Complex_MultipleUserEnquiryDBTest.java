@@ -11,13 +11,13 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import com.training.dataproviders.LoginDataProviders;
 import com.training.generics.ScreenShot;
 import com.training.pom.EnquiryPOM;
-import com.training.dataproviders.LoginDataProviders;
 import com.training.utility.DriverFactory;
 import com.training.utility.DriverNames;
 
-public class MultipleUserEnquiryTest {
+public class Complex_MultipleUserEnquiryDBTest {
 	private WebDriver driver;
 	private String baseUrl;
 	private EnquiryPOM enquiryPOM;
@@ -47,8 +47,8 @@ public class MultipleUserEnquiryTest {
 		driver.quit();
 	}
 	
-	@Test(dataProvider="excel-inputs",dataProviderClass = LoginDataProviders.class)
-	public void Enquiry(String name, String email, String subject, String message) throws InterruptedException, AWTException {
+	@Test(dataProvider="db-inputs",dataProviderClass = LoginDataProviders.class)
+	public void Enquiry(String name, String usermail, String subject, String message) throws InterruptedException, AWTException {
 		//Click on NewLaunch link
 		enquiryPOM.NewLaunch();
 		//Enter the address
@@ -61,7 +61,7 @@ public class MultipleUserEnquiryTest {
 		//enter name of the user
 		enquiryPOM.entername(name);
 		//enter user mail id
-		enquiryPOM.enteremail(email);
+		enquiryPOM.enteremail(usermail);
 		//enter the subject
 		enquiryPOM.entersubject(subject);
 		//enter the message
@@ -69,8 +69,8 @@ public class MultipleUserEnquiryTest {
 		//click on Send
 		enquiryPOM.submit();
 		//validate the error message since there is no server
-		enquiryPOM.validateerrormsg();
-		screenShot.captureScreenShot("First");
+		enquiryPOM.verifyinvalidinput();
+		screenShot.captureScreenShot("First");	
 	}
 
 }
