@@ -15,7 +15,7 @@ import com.training.pom.LoginPOM;
 import com.training.utility.DriverFactory;
 import com.training.utility.DriverNames;
 
-public class LoginTest {
+public class Simple_LoginTest {
 
 	private WebDriver driver;
 	private String baseUrl;

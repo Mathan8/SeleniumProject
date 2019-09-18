@@ -15,7 +15,7 @@ import com.training.pom.PwdRecoveryPOM;
 import com.training.utility.DriverFactory;
 import com.training.utility.DriverNames;
 
-public class PwdRecoveryTest {
+public class Simple_PwdRecoveryTest {
 
 		private WebDriver driver;
 		private String baseUrl;

@@ -16,7 +16,7 @@ import com.training.pom.EnquiryPOM;
 import com.training.utility.DriverFactory;
 import com.training.utility.DriverNames;;
 
-public class EnquiryTest {
+public class Simple_EnquiryTest {
 	
 	private WebDriver driver;
 	private String baseUrl;
